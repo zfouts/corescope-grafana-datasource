@@ -1,0 +1,126 @@
+{
+ "node": {
+  "advert_count": 61,
+  "battery_mv": null,
+  "configured_scope": null,
+  "configured_scope_at": null,
+  "default_scope": null,
+  "first_seen": "2026-03-17T21:47:58.081Z",
+  "foreign": false,
+  "hash_size": null,
+  "hash_size_inconsistent": false,
+  "last_heard": "2026-11-24T01:48:19Z",
+  "last_seen": "2026-11-24T01:48:19Z",
+  "lat": 37.888,
+  "lon": -122.268,
+  "name": "KN6PLV-BrkOxfLA-Yebes",
+  "public_key": "988396af0ff369c2178a8c2a303661bf26193257136ed4452b6eadd9547011e9",
+  "role": "repeater",
+  "temperature_c": null
+ },
+ "timeRange": {
+  "from": "2026-11-17T01:48:40Z",
+  "to": "2026-11-24T01:48:40Z",
+  "days": 7,
+  "dataFrom": "2026-11-23T23:40:49Z",
+  "dataFromReason": "database",
+  "partial": true
+ },
+ "activityTimeline": [
+  {
+   "count": 1,
+   "bucket": "2026-11-24T01:00:00Z",
+   "certain": 1
+  }
+ ],
+ "snrTrend": [],
+ "heardBy": [],
+ "packetTypeBreakdown": [
+  {
+   "payload_type": 4,
+   "count": 1
+  }
+ ],
+ "observerCoverage": [
+  {
+   "observer_id": "C449BA85475D8EBB4AEFE3A9F0A7042516EAA1279D6BC52A85D61914DF0D7DB1",
+   "observer_name": "Jackrabbit\ud83d\udc30",
+   "packetCount": 1,
+   "avgSnr": null,
+   "avgRssi": null,
+   "firstSeen": "2026-11-24T01:44:53Z",
+   "lastSeen": "2026-11-24T01:44:53Z"
+  }
+ ],
+ "hopDistribution": [
+  {
+   "hops": "4+",
+   "count": 1
+  }
+ ],
+ "peerInteractions": [],
+ "uptimeHeatmap": [
+  {
+   "dayOfWeek": 2,
+   "hour": 1,
+   "count": 1
+  }
+ ],
+ "computedStats": {
+  "availabilityPct": null,
+  "longestSilenceMs": 4751000,
+  "longestSilenceStart": "2026-11-23T23:40:49Z",
+  "signalGrade": "D",
+  "snrMean": 0,
+  "snrStdDev": 0,
+  "relayPct": 100,
+  "totalPackets": 1,
+  "uniqueObservers": 0,
+  "uniquePeers": 0,
+  "avgPacketsPerDay": null
+ },
+ "clockSkew": {
+  "pubkey": "988396af0ff369c2178a8c2a303661bf26193257136ed4452b6eadd9547011e9",
+  "meanSkewSec": -20679202.8,
+  "medianSkewSec": -20679202.8,
+  "lastSkewSec": -20679202.8,
+  "recentMedianSkewSec": -20679202.8,
+  "driftPerDaySec": 0,
+  "severity": "no_clock",
+  "sampleCount": 1,
+  "calibrated": false,
+  "lastAdvertTS": 1774805490,
+  "lastObservedTS": 1795484693,
+  "samples": [
+   {
+    "ts": 1795484693,
+    "skew": -20679202.8
+   }
+  ],
+  "goodFraction": 0,
+  "recentBadSampleCount": 0,
+  "recentSampleCount": 0,
+  "recentHashEvidence": [
+   {
+    "hash": "e8b09a35ac87fa5c",
+    "observers": [
+     {
+      "observerID": "C449BA85475D8EBB4AEFE3A9F0A7042516EAA1279D6BC52A85D61914DF0D7DB1",
+      "observerName": "Jackrabbit\ud83d\udc30",
+      "rawSkewSec": -20679202.9,
+      "correctedSkewSec": -20679202.9,
+      "observerOffsetSec": 0,
+      "calibrated": false
+     }
+    ],
+    "medianCorrectedSkewSec": 0,
+    "timestamp": 1795484693
+   }
+  ],
+  "calibrationSummary": {
+   "totalSamples": 1,
+   "calibratedSamples": 0,
+   "uncalibratedSamples": 1
+  }
+ }
+}

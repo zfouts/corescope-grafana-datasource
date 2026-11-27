@@ -1,0 +1,35 @@
+{
+ "bucket_seconds": 3600,
+ "window": "",
+ "region": "",
+ "summary": {
+  "packets": 365,
+  "avg_repeaters": 7.720547945205479,
+  "observers": 20,
+  "one_byte_packets": 329,
+  "no_repeater_packets": 2
+ },
+ "buckets": [
+  {
+   "start": "2026-11-23T23:00:00Z",
+   "packets": 52,
+   "repeater_sum": 428,
+   "avg_repeaters": 8.23076923076923,
+   "observers": 14
+  },
+  {
+   "start": "2026-11-24T00:00:00Z",
+   "packets": 183,
+   "repeater_sum": 1376,
+   "avg_repeaters": 7.51912568306011,
+   "observers": 18
+  },
+  {
+   "start": "2026-11-24T01:00:00Z",
+   "packets": 130,
+   "repeater_sum": 1014,
+   "avg_repeaters": 7.8,
+   "observers": 20
+  }
+ ]
+}

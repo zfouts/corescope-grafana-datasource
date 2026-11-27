@@ -1,0 +1,4 @@
+{"totalPackets": 120, "totalAllPackets": 130, "totalTransmissions": 125,
+ "packetsPerHour": [{"hour": "2026-11-23T22", "count": 40}, {"hour": "2026-11-23T23", "count": 80}],
+ "signalOverTime": [{"hour": "2026-11-23T23", "count": 80, "avgSnr": 6.25}],
+ "payloadTypes": [{"type": 4, "name": "ADVERT", "count": 30}, {"type": 5, "name": "GRP_TXT", "count": 90}]}

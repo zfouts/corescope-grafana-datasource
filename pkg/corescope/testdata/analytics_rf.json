@@ -1,0 +1,228 @@
+{
+ "avgPacketSize": 64,
+ "maxPacketSize": 242,
+ "minPacketSize": 12,
+ "packetSizes": {
+  "bins": [
+   {
+    "count": 8,
+    "w": 9.2,
+    "x": 12
+   },
+   {
+    "count": 157,
+    "w": 9.2,
+    "x": 21.2
+   },
+   {
+    "count": 33,
+    "w": 9.2,
+    "x": 30.4
+   },
+   {
+    "count": 28,
+    "w": 9.2,
+    "x": 39.599999999999994
+   },
+   {
+    "count": 46,
+    "w": 9.2,
+    "x": 48.8
+   },
+   {
+    "count": 11,
+    "w": 9.2,
+    "x": 58
+   },
+   {
+    "count": 68,
+    "w": 9.2,
+    "x": 67.19999999999999
+   },
+   {
+    "count": 2,
+    "w": 9.2,
+    "x": 76.39999999999999
+   },
+   {
+    "count": 10,
+    "w": 9.2,
+    "x": 85.6
+   },
+   {
+    "count": 6,
+    "w": 9.2,
+    "x": 94.8
+   },
+   {
+    "count": 8,
+    "w": 9.2,
+    "x": 104
+   },
+   {
+    "count": 33,
+    "w": 9.2,
+    "x": 113.19999999999999
+   },
+   {
+    "count": 64,
+    "w": 9.2,
+    "x": 122.39999999999999
+   },
+   {
+    "count": 17,
+    "w": 9.2,
+    "x": 131.6
+   },
+   {
+    "count": 0,
+    "w": 9.2,
+    "x": 140.79999999999998
+   },
+   {
+    "count": 7,
+    "w": 9.2,
+    "x": 150
+   },
+   {
+    "count": 0,
+    "w": 9.2,
+    "x": 159.2
+   },
+   {
+    "count": 0,
+    "w": 9.2,
+    "x": 168.39999999999998
+   },
+   {
+    "count": 0,
+    "w": 9.2,
+    "x": 177.6
+   },
+   {
+    "count": 0,
+    "w": 9.2,
+    "x": 186.79999999999998
+   },
+   {
+    "count": 0,
+    "w": 9.2,
+    "x": 196
+   },
+   {
+    "count": 0,
+    "w": 9.2,
+    "x": 205.2
+   },
+   {
+    "count": 0,
+    "w": 9.2,
+    "x": 214.39999999999998
+   },
+   {
+    "count": 0,
+    "w": 9.2,
+    "x": 223.6
+   },
+   {
+    "count": 1,
+    "w": 9.2,
+    "x": 232.79999999999998
+   }
+  ],
+  "max": 242,
+  "min": 12
+ },
+ "packetsPerHour": [
+  {
+   "hour": "2026-11-23T23",
+   "count": 62
+  },
+  {
+   "hour": "2026-11-24T00",
+   "count": 246
+  },
+  {
+   "hour": "2026-11-24T01",
+   "count": 191
+  }
+ ],
+ "payloadTypes": [
+  {
+   "type": 5,
+   "name": "GRP_TXT",
+   "count": 166
+  },
+  {
+   "type": 4,
+   "name": "ADVERT",
+   "count": 102
+  },
+  {
+   "type": 1,
+   "name": "RESPONSE",
+   "count": 78
+  },
+  {
+   "type": 0,
+   "name": "REQ",
+   "count": 60
+  },
+  {
+   "type": 2,
+   "name": "TXT_MSG",
+   "count": 44
+  },
+  {
+   "type": 8,
+   "name": "PATH",
+   "count": 20
+  },
+  {
+   "type": 7,
+   "name": "ANON_REQ",
+   "count": 17
+  },
+  {
+   "type": 9,
+   "name": "TRACE",
+   "count": 8
+  },
+  {
+   "type": 11,
+   "name": "CONTROL",
+   "count": 4
+  }
+ ],
+ "rssi": {
+  "avg": 0,
+  "max": 0,
+  "median": 0,
+  "min": 0,
+  "stddev": 0
+ },
+ "rssiValues": {
+  "bins": [],
+  "max": 0,
+  "min": 0
+ },
+ "scatterData": [],
+ "signalOverTime": [],
+ "snr": {
+  "avg": 0,
+  "max": 0,
+  "median": 0,
+  "min": 0,
+  "stddev": 0
+ },
+ "snrByType": [],
+ "snrValues": {
+  "bins": [],
+  "max": 0,
+  "min": 0
+ },
+ "timeSpanHours": 2.125,
+ "totalAllPackets": 499,
+ "totalPackets": 0,
+ "totalTransmissions": 499
+}

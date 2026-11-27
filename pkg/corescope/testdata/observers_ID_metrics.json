@@ -1,0 +1,11 @@
+{
+ "observer_id": "D5EF2ED77CEABCB22082F8794D5F9D89F2257E70533863E924DEBE6EBDDA312A",
+ "observer_name": "Kennedy Repeater",
+ "reboots": ["2026-11-23T23:10:00Z"],
+ "metrics": [
+  {"timestamp": "2026-11-23T23:00:00Z", "noise_floor": -112.5, "battery_mv": 4012, "packets_sent": 3, "packets_recv": 41, "tx_airtime_pct": 0.8, "rx_airtime_pct": 6.1, "recv_error_rate": 1.2},
+  {"timestamp": "2026-11-23T23:05:00Z", "noise_floor": -111.0, "battery_mv": 4010, "packets_sent": 2, "packets_recv": 37, "tx_airtime_pct": 0.5, "rx_airtime_pct": 5.4, "recv_error_rate": null},
+  {"timestamp": "2026-11-23T23:10:00Z", "noise_floor": null, "battery_mv": null, "tx_airtime_pct": null, "rx_airtime_pct": null, "recv_error_rate": null, "is_reboot_sample": true},
+  {"timestamp": "2026-11-23T23:15:00Z", "noise_floor": -113.25, "battery_mv": 4008, "packets_sent": 4, "packets_recv": 45, "tx_airtime_pct": 1.1, "rx_airtime_pct": 6.9, "recv_error_rate": 0.0}
+ ]
+}

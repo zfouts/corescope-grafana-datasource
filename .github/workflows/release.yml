@@ -1,0 +1,62 @@
+# Builds the plugin on a version tag, publishes the zip(s) with SHA256 checksums
+# and a build provenance attestation as a GitHub release.
+# (For more information, see https://github.com/grafana/plugin-actions/blob/main/build-plugin/README.md)
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*' # Run workflow on version tags, e.g. v1.0.0.
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    # Create a GitHub environment named `release` (Settings > Environments) and add
+    # required reviewers so a tag push cannot publish without approval.
+    environment: release
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # Plugin signing is DISABLED for now. To enable it:
+      #   1. Create a Grafana Cloud access policy with the `plugins:write` scope and generate a token
+      #      (https://grafana.com/developers/plugin-tools/publish-a-plugin/sign-a-plugin#generate-an-access-policy-token).
+      #   2. Save it as the `GRAFANA_ACCESS_POLICY_TOKEN` secret of the `release` environment.
+      #   3. Uncomment the `with:` block below (keep it on this step only; never set the token at job level).
+      - name: Build plugin
+        uses: grafana/plugin-actions/build-plugin@8b12a2d6fa5fc0939a6bf75905453d4b505ef29a # build-plugin/v1.2.0
+        # with:
+        #   policy_token: ${{ secrets.GRAFANA_ACCESS_POLICY_TOKEN }}
+
+      - name: Checksum release archives
+        run: |
+          shopt -s nullglob
+          zips=(*.zip)
+          if [ "${#zips[@]}" -eq 0 ]; then
+            echo "no release zip found" >&2
+            exit 1
+          fi
+          for z in "${zips[@]}"; do
+            sha256sum "$z" > "$z.sha256"
+          done
+          ls -l ./*.zip ./*.sha256
+
+      - name: Attest build provenance
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: '*.zip'
+
+      # build-plugin leaves the release as a draft; add the checksums to that draft.
+      - name: Upload checksums to the release
+        uses: softprops/action-gh-release@62c96d0c4e8a889135c1f3a25910db8dbe0e85f7 # v2.3.4
+        with:
+          draft: true
+          files: '*.sha256'

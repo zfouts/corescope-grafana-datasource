@@ -1,0 +1,9 @@
+{
+ "sources": [
+  {"name": "primary", "broker": "mqtts://broker.example.net:8883", "connected": true, "lastConnectUnix": 1795480000, "lastDisconnectUnix": 0, "lastPacketUnix": 1795484690, "connectCount": 1, "disconnectCount": 0, "packetsTotal": 12034, "packetsLast5m": 88},
+  {"name": "backup", "broker": "mqtt://user:***@backup.example.net:1883", "connected": false, "lastConnectUnix": 1795400000, "lastDisconnectUnix": 1795470000, "lastPacketUnix": 1795469990, "connectCount": 4, "disconnectCount": 4, "packetsTotal": 301, "packetsLast5m": 0, "lastError": "dial tcp: connection refused"}
+ ],
+ "sampleAt": "2026-11-24T01:48:40Z",
+ "watchdogLastTickUnix": 1795484700,
+ "watchdogPanicCount": 0
+}

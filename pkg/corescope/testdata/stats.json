@@ -1,0 +1,27 @@
+{
+ "totalPackets": 499,
+ "totalTransmissions": 499,
+ "totalObservations": 499,
+ "totalNodes": 200,
+ "totalNodesAllTime": 200,
+ "totalObservers": 31,
+ "packetsLastHour": 213,
+ "packetsLast24h": 499,
+ "engine": "go",
+ "version": "unknown",
+ "commit": "unknown",
+ "buildTime": "unknown",
+ "counts": {
+  "repeaters": 168,
+  "rooms": 23,
+  "companions": 9,
+  "sensors": 0
+ },
+ "hashMigrationComplete": false,
+ "trackedMB": 1.3,
+ "storeDataMB": 1.3,
+ "processRSSMB": 50,
+ "goHeapInuseMB": 19.8,
+ "goSysMB": 39.9,
+ "neighborGraphCacheRebuildFailures": 0
+}

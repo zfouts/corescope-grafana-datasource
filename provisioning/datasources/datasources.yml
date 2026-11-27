@@ -1,0 +1,14 @@
+apiVersion: 1
+
+datasources:
+  - name: 'CoreScope'
+    uid: 'corescope'
+    type: 'zfouts-corescope-datasource'
+    access: proxy
+    isDefault: true
+    orgId: 1
+    version: 1
+    editable: true
+    jsonData:
+      url: 'http://corescope:3000'
+      timeoutSeconds: 15

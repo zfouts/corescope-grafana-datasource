@@ -1,0 +1,44 @@
+{
+ "status": "ok",
+ "engine": "go",
+ "version": "unknown",
+ "commit": "unknown",
+ "buildTime": "unknown",
+ "uptime": 6,
+ "uptimeHuman": "0h 0m",
+ "memory": {
+  "rss": 39,
+  "heapUsed": 16,
+  "heapTotal": 31,
+  "external": 0
+ },
+ "eventLoop": {
+  "currentLagMs": 0.1,
+  "maxLagMs": 0.2,
+  "p50Ms": 0.1,
+  "p95Ms": 0.2,
+  "p99Ms": 0.2
+ },
+ "cache": {
+  "entries": 0,
+  "hits": 0,
+  "misses": 0,
+  "staleHits": 0,
+  "recomputes": 0,
+  "hitRate": 0
+ },
+ "websocket": {
+  "clients": 0
+ },
+ "packetStore": {
+  "packets": 499,
+  "estimatedMB": 16.5,
+  "trackedMB": 1.3
+ },
+ "perf": {
+  "totalRequests": 5,
+  "avgMs": 0.6,
+  "slowQueries": 0,
+  "recentSlow": []
+ }
+}
