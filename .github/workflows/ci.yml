@@ -197,6 +197,11 @@ jobs:
       - name: Install dev dependencies
         run: npm ci
 
+      # The E2E tests expect CoreScope's public e2e fixture (dev/data is
+      # gitignored, so it is built here, as `npm run dev:data` does locally).
+      - name: Seed CoreScope dev data
+        run: npm run dev:data
+
       - name: Start Grafana
         run: |
           docker compose pull
@@ -221,6 +226,7 @@ jobs:
         if: ${{ always() && steps.run-tests.outcome == 'failure' }}
         run: |
           docker logs zfouts-corescope-datasource >& grafana-server.log
+          docker logs corescope-dev 2>&1 | tail -100
 
       - name: Stop grafana docker
         run: docker compose down
