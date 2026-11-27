@@ -430,7 +430,7 @@ func (c *Client) attempt(ctx context.Context, u, path string, limit int64) (body
 // transportError maps a failed Do to a fixed-text *Error. refused reports a
 // connection refused, the only transport failure worth retrying.
 func transportError(path string, err error) (e error, refused bool) {
-	var inner error = err
+	inner := err
 	var ue *url.Error
 	if errors.As(err, &ue) {
 		inner = ue.Err // drop the URL, which carries query values

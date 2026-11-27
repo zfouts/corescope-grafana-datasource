@@ -358,7 +358,7 @@ func TestClientRedirectNotFollowed(t *testing.T) {
 		s.Secrets = &models.SecretPluginSettings{BearerToken: "tok"}
 	})
 	_, err := c.Stats(context.Background())
-	wantError(t, err, http.StatusFound, "upstream redirected; check the URL")
+	_ = wantError(t, err, http.StatusFound, "upstream redirected; check the URL")
 	if n := otherHits.Load(); n != 0 {
 		t.Fatalf("redirect target got %d requests", n)
 	}
@@ -369,7 +369,7 @@ func TestClientSPAFallbackIsError(t *testing.T) {
 	c := newTestClient(t, srv.URL, nil)
 	// Valid observer id, but no fixture for it: the server answers HTML.
 	_, err := c.ObserverMetrics(context.Background(), "unknown", time.Time{}, time.Time{}, "")
-	wantError(t, err, http.StatusBadGateway, "upstream returned 200 text/html; the URL may not point at a CoreScope API")
+	_ = wantError(t, err, http.StatusBadGateway, "upstream returned 200 text/html; the URL may not point at a CoreScope API")
 }
 
 func TestClientErrorMessages(t *testing.T) {
@@ -442,7 +442,7 @@ func TestClientOversizedBody(t *testing.T) {
 	defer srv.Close()
 	c := newTestClient(t, srv.URL, nil)
 	_, err := c.Stats(context.Background())
-	wantError(t, err, http.StatusBadGateway, "upstream response too large")
+	_ = wantError(t, err, http.StatusBadGateway, "upstream response too large")
 
 	// /api/nodes has the larger cap, so the same body decodes there.
 	if _, err := c.Nodes(context.Background(), NodeQuery{}); err != nil {
@@ -509,7 +509,7 @@ func TestClient503ForeverFailsWithinBudget(t *testing.T) {
 	start := time.Now()
 	_, err := c.RF(context.Background(), Window{})
 	elapsed := time.Since(start)
-	wantError(t, err, 503, "warming up")
+	_ = wantError(t, err, 503, "warming up")
 	if elapsed > 1500*time.Millisecond {
 		t.Fatalf("took %v, budget is 1s", elapsed)
 	}
@@ -529,7 +529,7 @@ func TestClientRetryAfterBeyondBudgetFailsFast(t *testing.T) {
 	c := newTestClient(t, srv.URL, func(s *models.PluginSettings) { s.TimeoutSeconds = 2 })
 	start := time.Now()
 	_, err := c.RF(context.Background(), Window{})
-	wantError(t, err, 503, "warming up")
+	_ = wantError(t, err, 503, "warming up")
 	if elapsed := time.Since(start); elapsed > 500*time.Millisecond {
 		t.Fatalf("waited %v despite Retry-After beyond budget", elapsed)
 	}
@@ -568,7 +568,7 @@ func TestClient404NotRetried(t *testing.T) {
 	defer srv.Close()
 	c := newTestClient(t, srv.URL, nil)
 	_, err := c.NodeBattery(context.Background(), testPubkey, 7)
-	wantError(t, err, 404, "node not found")
+	_ = wantError(t, err, 404, "node not found")
 	if n := hits.Load(); n != 1 {
 		t.Fatalf("attempts = %d, want 1", n)
 	}
@@ -638,12 +638,12 @@ func TestClientInvalidPathSegmentsMakeNoRequest(t *testing.T) {
 		if _, err := c.NodeAnalytics(ctx, pk, 7); err == nil {
 			t.Errorf("NodeAnalytics(%q) succeeded", pk)
 		} else {
-			wantError(t, err, 400, "invalid pubkey")
+			_ = wantError(t, err, 400, "invalid pubkey")
 		}
 		if _, err := c.NodeBattery(ctx, pk, 7); err == nil {
 			t.Errorf("NodeBattery(%q) succeeded", pk)
 		} else {
-			wantError(t, err, 400, "invalid pubkey")
+			_ = wantError(t, err, 400, "invalid pubkey")
 		}
 	}
 	if n := rec.hits.Load(); n != 0 {
@@ -805,7 +805,7 @@ func TestClientGzipBombCapped(t *testing.T) {
 	defer srv.Close()
 	c := newTestClient(t, srv.URL, nil)
 	_, err := c.Stats(context.Background())
-	wantError(t, err, http.StatusBadGateway, "upstream response too large")
+	_ = wantError(t, err, http.StatusBadGateway, "upstream response too large")
 }
 
 func TestClientCacheTTL(t *testing.T) {
