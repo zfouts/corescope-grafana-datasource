@@ -32,7 +32,7 @@ jobs:
       #   2. Save it as the `GRAFANA_ACCESS_POLICY_TOKEN` secret of the `release` environment.
       #   3. Uncomment the `with:` block below (keep it on this step only; never set the token at job level).
       - name: Build plugin
-        uses: grafana/plugin-actions/build-plugin@8b12a2d6fa5fc0939a6bf75905453d4b505ef29a # build-plugin/v1.2.0
+        uses: grafana/plugin-actions/build-plugin@567c1dd5fdbfd9439d17dec51b056c4a2d60bd19 # build-plugin/v2.0.2
         # with:
         #   policy_token: ${{ secrets.GRAFANA_ACCESS_POLICY_TOKEN }}
 
