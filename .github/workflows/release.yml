@@ -56,7 +56,7 @@ jobs:
 
       # build-plugin leaves the release as a draft; add the checksums to that draft.
       - name: Upload checksums to the release
-        uses: softprops/action-gh-release@62c96d0c4e8a889135c1f3a25910db8dbe0e85f7 # v2.3.4
+        uses: softprops/action-gh-release@8a0cd651e5b2365bd640854a3fa5dfc70e4875f3 # v3.0.4
         with:
           draft: true
           files: '*.sha256'
